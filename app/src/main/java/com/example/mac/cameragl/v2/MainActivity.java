@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceTexture.On
                     int width = mCameraHelper.getCameraPreviewWidth();
                     int height = mCameraHelper.getCameraPreviewHeight();
                     Frame.ROTATE rotation = mCameraHelper.computeFrameRotation(mCameraHelper.getPreviewRotation());
-                    asyncDetector.process(createFrameFromData(data, height, width, Frame.ROTATE.NO_ROTATION), timestamp);
+                    asyncDetector.process(createFrameFromData(data, height, width, Frame.ROTATE.BY_90_CCW), timestamp);
                 }
             }
         });
